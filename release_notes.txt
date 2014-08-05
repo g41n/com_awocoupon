@@ -1,0 +1,53 @@
+
+2.0.14
+- Updated the display of coupon code in front end so customer can delete coupon from cart, can use template override to change looks
+
+2.0.13
+- Updated number of uses logic, for Virtuemart 2.0.26, this fix is needed to get it to work with no holes:
+   https://awodev.com/forum/awocoupon/help-section/virtuemart-2026-coupon-usage-not-being-recorded
+
+2.0.12
+- Fixed bug where entering an invalid coupon code would cause the error message to be displayed on the remaining session page refreshes
+
+2.0.11
+- Updated to work with Virtuemart 2.0.26 SetCouponInUse function
+- updated to fix ajax population of Products/Categories where multiple languages are involved
+- Updated minimum coupon error to include the amount
+
+2.0.10
+- Added support for Russian language
+
+2.0.9
+- Added category
+- Updated error messages to display default Virtuemart error when order minimum has not been reached
+
+2.0.8
+- Updated interface so shops with many users or products do not get a memory timeout when trying to add a coupon code
+
+2.0.7
+- Fixed issue where coupon code may be cached and customer can use a restricted number of uses code more than the allowed times
+
+2.0.6
+- updated to work with Virtuemart 2.0.21 and up
+- Updated starttime/expiraiton check to use the timezone set within Joomla global configuration instead of server time
+- Fixed display of message "Discount Coupon successfully added" when adding a code that does not exist
+
+2.0.5
+- Fixed problem with queuing messages where message was supporessed when updating/deleting products in cart with valid coupon
+- Added the ability to set Discount Type to 'Specific' for value type amount coupon
+
+2.0.4
+- Fixed issue where using the copy coupon code api was not also copying the products
+
+2.0.3
+- Fixed JHTMLSlider compatibility with Joomla 1.5
+
+2.0.2
+- Added Dutch Translations
+- Fixed problem with using number of uses per customer
+- Fixed problem with selecting Amount Coupons
+- Fixed enqueueMessage error when saving a coupon with errors
+
+2.0.1
+- Updated to work with Virtuemart 2.0.0 stable
+- Security Updates
