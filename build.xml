@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com_awocoupon" default="copy" basedir=".">
+    <property name="src"   value="."/>
+    <property name="demo_site"  value="/var/www/html/jlab33/components/com_awocoupon/" />
+    <property name="demo_admin"  value="/var/www/html/jlab33/administrator/components/com_awocoupon/" />
+    <property name="archive"  value="${project.basedir}" override="true"  />
+		
+    <fileset dir="${src}" id="allFiles">
+        <include name="**" />
+        <exclude name=".**" />
+        <exclude name="nbproject*" />
+        <exclude name="build.*" />
+        <exclude name="*.zip"/>
+    </fileset> 
+    <fileset dir="${src}/site" id="siteFiles" defaultexcludes="true">
+        <include name="**"/>
+        <exclude name=".*"/>
+    </fileset> 
+    <fileset dir="${src}/admin" id="adminFiles" defaultexcludes="true">
+        <include name="**"/>
+        <exclude name=".*"/>
+    </fileset> 
+	 	 
+    <target name="copy" description="Copies files to test project.">
+        <echo message="Running build.xml. Copying files from dev to test..."/>
+        <copy todir="${demo_site}">
+            <fileset refid="siteFiles"/>
+        </copy>
+        <copy todir="${demo_admin}">
+            <fileset refid="adminFiles"/>
+        </copy>
+    </target>
+        
+    <target name="dist" description="Prepare a distribution file.">
+        <echo msg="Creating archive..." />
+        <zip destfile="${archive}/com_awocoupon.zip">
+            <fileset refid="allFiles" />
+        </zip>                
+    </target>
+</project>
