@@ -446,9 +446,11 @@ function getjqdd(intype) {
 		</fieldset>
 	</div>
 
-	<div class="width-50 fltrt">
+	<div class="width-50">
 		<?php
-		if(version_compare(JVERSION,'1.6.0','ge')) {
+		if(version_compare(JVERSION,'3','ge')) {
+			echo "<fieldset><legend>" . JText::_('COM_AWOCOUPON_CP_CUSTOMERS') . "</legend>";
+                } else if(version_compare(JVERSION,'1.6.0','ge')) {
 			echo JHtml::_('sliders.start','extra_options', array('startOffset'=>1));
 			echo JHtml::_('sliders.panel',JText::_('COM_AWOCOUPON_CP_CUSTOMERS'), 'pn_user');
 		}  else {
@@ -513,7 +515,9 @@ function getjqdd(intype) {
 				
 
 		<?php
-		if(version_compare(JVERSION,'1.6.0','ge')) {
+		if(version_compare(JVERSION,'3','ge')) {
+			echo "</fieldset><fieldset><legend>" . JText::_('COM_AWOCOUPON_CP_PRODUCTS') . "</legend>";
+		} else if(version_compare(JVERSION,'1.6.0','ge')) {
 			echo JHtml::_('sliders.panel',JText::_('COM_AWOCOUPON_CP_PRODUCTS'), 'pn_asset');
 		} else {
 			echo $sliders->endPanel();
@@ -583,7 +587,9 @@ function getjqdd(intype) {
 
 
 		<?php
-		if(version_compare(JVERSION,'1.6.0','ge')) {
+		if(version_compare(JVERSION,'3','ge')) {
+			echo "</fieldset>";
+                } else if(version_compare(JVERSION,'1.6.0','ge')) {
 			echo JHtml::_('sliders.end');
 		} else {
 			echo $sliders->endPanel();
