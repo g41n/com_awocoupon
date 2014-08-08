@@ -9,7 +9,7 @@
 // Disallow direct access to this file
 defined('_JEXEC') or die('Restricted access'); ?>
 
-<form action="index.php" method="post" name="adminForm">
+<form action="index.php" method="post" name="adminForm" id="adminForm">
 
 	<table class="adminform">
 		<tr>
@@ -28,11 +28,11 @@ defined('_JEXEC') or die('Restricted access'); ?>
 		</tr>
 	</table>
 
-	<table class="adminlist" cellspacing="1">
+	<table class="table table-striped" cellspacing="1">
 	<thead>
 		<tr>
 			<th width="5"><?php echo JText::_( 'COM_AWOCOUPON_GBL_NUM' ); ?></th>
-			<th width="5"><input type="checkbox" name="toggle" value="" onClick="checkAll(<?php echo count( $this->rows ); ?>);" /></th>
+			<th width="5"><input type="checkbox" name="toggle" value="" onClick="Joomla.checkAll(<?php echo count( $this->rows ); ?>);" /></th>
 			<th class="title"><?php echo JHTML::_('grid.sort', 'COM_AWOCOUPON_CP_COUPON_CODE', 'c.coupon_code', $this->lists['order_Dir'], $this->lists['order'] ); ?></th>
 			<th class="title"><?php echo JHTML::_('grid.sort', 'COM_AWOCOUPON_CP_FUNCTION_TYPE', 'c.function_type', $this->lists['order_Dir'], $this->lists['order'] ); ?></th>
 			<th class="title"><?php echo JHTML::_('grid.sort', 'COM_AWOCOUPON_CP_VALUE_TYPE', 'c.coupon_value_type', $this->lists['order_Dir'], $this->lists['order'] ); ?></th>
