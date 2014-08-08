@@ -6,6 +6,9 @@
  * @Website : http://awodev.com
  **/
 
+if(!defined('DS')){
+   define('DS',DIRECTORY_SEPARATOR);
+}
 
 global $install_manifest, $install_source;
 $install_manifest = $this->manifest;

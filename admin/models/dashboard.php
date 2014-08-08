@@ -16,7 +16,7 @@ jimport('joomla.application.component.model');
  * @subpackage JomProducts
  * @since 1.0
  */
-class AwoCouponModelDashboard extends JModel
+class AwoCouponModelDashboard extends JModelLegacy
 {
 	var $_data = null;
 

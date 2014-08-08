@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.model');
 
-class AwoCouponModelAssets extends JModel {
+class AwoCouponModelAssets extends JModelLegacy {
 	var $_id = null;
 
 	/**

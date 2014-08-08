@@ -53,8 +53,8 @@ defined('_JEXEC') or die('Restricted access');
 
 		
 				<?php
-				echo $this->pane->startPane( 'genstat-pane' );
-				echo $this->pane->startPanel( JText::_( 'COM_AWOCOUPON_DH_GENERAL_STATISTICS' ), 'unapproved' );
+				echo JHtml::_('tabs.start', 'mygroup');
+				echo JHtml::_('tabs.panel', JText::_( 'COM_AWOCOUPON_DH_GENERAL_STATISTICS' ), 'genstat-pane');
 				?>
 				<div id="dash_generalstats" class="postbox " >
 					<div class="inside">
@@ -75,8 +75,7 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 				</div>
 				<?php
-				echo $this->pane->endPanel();
-				echo $this->pane->startPanel( JText::_( 'COM_AWOCOUPON_DH_COUPON_RECENT' ), 'mostpop-pane' );
+				echo JHtml::_('tabs.start', JText::_( 'COM_AWOCOUPON_DH_COUPON_RECENT' ), 'mostpop-pane');
 				?>
 				<table class="adminlist">
 					<thead>
@@ -109,7 +108,7 @@ defined('_JEXEC') or die('Restricted access');
 					</tbody>
 				</table>
 				<?php
-				echo $this->pane->endPanel(); ?>
+				JHtml::_('tabs.end'); ?>
 		
 		
 		<table class="adminlist" border="0">

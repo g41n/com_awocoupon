@@ -9,9 +9,13 @@
 // Disallow direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+if(!defined('DS')){
+   define('DS',DIRECTORY_SEPARATOR);
+}
+
 jimport('joomla.application.component.model');
 
-class AwoCouponModelInstallation extends JModel
+class AwoCouponModelInstallation extends JModelLegacy
 {
 	var $_pagination = null;
 	var $_id = null;

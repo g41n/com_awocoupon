@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.model');
 
-class AwoCouponModelUsers extends JModel {
+class AwoCouponModelUsers extends JModelLegacy {
 	var $_pagination = null;
 	var $_id = null;
 

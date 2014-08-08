@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport( 'joomla.application.component.view');
 
-class AwoCouponViewInstallation extends JView {
+class AwoCouponViewInstallation extends JViewLegacy {
 	/**
 	 * Creates the Entrypage
 	 *

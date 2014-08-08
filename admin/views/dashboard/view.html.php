@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport( 'joomla.application.component.view');
 
-class AwoCouponViewDashboard extends JView {
+class AwoCouponViewDashboard extends JViewLegacy {
 	/**
 	 * Creates the Entrypage
 	 *
@@ -25,7 +25,7 @@ class AwoCouponViewDashboard extends JView {
 
 		//initialise variables
 		$document	= & JFactory::getDocument();
-		$pane   	= & JPane::getInstance('sliders');
+		//$pane   	= & JPane::getInstance('sliders'); // no more JPane in Joomla 3
 		$update 	= 0;
 
 		//build toolbar
@@ -42,7 +42,7 @@ class AwoCouponViewDashboard extends JView {
 
 		$this->assignRef('genstats'		, $genstats);		
 		$this->assignRef('lastentered'	, $lastentered);
-		$this->assignRef('pane'			, $pane);
+		//$this->assignRef('pane'			, $pane); // no more JPane in Joomla 3
 		$this->assignRef('update'		, $update);
 		$this->assignRef('check'		, $check);
 		$this->assignRef('def_lists'	, $def_lists);

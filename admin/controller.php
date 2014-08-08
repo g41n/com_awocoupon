@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.controller');
 
 
-class AwoCouponController extends JController {
+class AwoCouponController extends JControllerLegacy {
 	/**
 	 * Constructor
 	 **/

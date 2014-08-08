@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.model');
 
-class AwoCouponModelCoupon extends JModel
+class AwoCouponModelCoupon extends JModelLegacy
 {
 
 	var $_entry	 		= null;
@@ -23,7 +23,7 @@ class AwoCouponModelCoupon extends JModel
 	 **/
 	function __construct()
 	{
-		parent::__construct();
+		parent::__construct(array ('table_path'=> JPATH_COMPONENT_ADMINISTRATOR . "/tables"));
 
 		$cid = JRequest::getVar( 'cid', array(0), '', 'array' );
 		JArrayHelper::toInteger($cid, array(0));

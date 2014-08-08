@@ -14,9 +14,6 @@ if (!function_exists('printrx')) { function printrx($a) { echo '<pre>'.print_r($
 // Disallow direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-// Set the table directory
-JTable::addIncludePath(JPATH_COMPONENT.'/tables');
-
 global $def_lists;
 
 require JPATH_COMPONENT_ADMINISTRATOR.'/awocoupon.config.php';
@@ -24,6 +21,8 @@ require JPATH_COMPONENT_ADMINISTRATOR.'/awocoupon.config.php';
 if (!class_exists( 'VmConfig' )) require JPATH_ADMINISTRATOR.'/components/com_virtuemart/helpers/config.php';
 VmConfig::loadConfig();
 
+// Set the table directory
+JTable::addIncludePath(JPATH_COMPONENT.'/tables');
 
 $jlang =& JFactory::getLanguage();
 $jlang->load('com_awocoupon', JPATH_ADMINISTRATOR, 'en-GB', true);

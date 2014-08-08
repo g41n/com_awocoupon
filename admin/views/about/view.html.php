@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport( 'joomla.application.component.view' );
 
-class AwoCouponViewAbout extends JView {
+class AwoCouponViewAbout extends JViewLegacy {
 
 	function display( $tpl = null ) {
 		// Load tooltips

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="component" version="1.5.0" method="upgrade">
-	<name>AwoCoupon</name>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_awocoupon</name>
 	<creationDate>2014-07-29</creationDate>
 	<author>Seyi Awofadeju</author>
 	<copyright>(C) Seyi Awofadeju - All rights reserved.</copyright>
@@ -10,20 +10,20 @@
 	<version>2.0.14</version>
 	<description>A coupon enhancement for Virtuemart 2.x</description>
 	
-	<installfile>install.awocoupon.php</installfile>
+	<scriptfile>install.awocoupon.php</scriptfile>
 	<uninstallfile>install.awocoupon.php</uninstallfile>
 	<install><sql><file driver="mysql" charset="utf8">install.mysql.sql</file></sql></install>
 	<uninstall><sql><file driver="mysql" charset="utf8">uninstall.mysql.sql</file></sql></uninstall>
 
 	<administration>
-		<menu img="../administrator/components/com_awocoupon/assets/images/awocoupon-small.png">COM_AWOCOUPON</menu>
+		<menu link="option=com_awocoupon" img="../administrator/components/com_awocoupon/assets/images/awocoupon-small.png">com_awocoupon</menu>
 		<files folder="admin">
 			<folder>assets/</folder>
 			<folder>helpers/</folder>
 			<folder>models/</folder>
 			<folder>tables/</folder>
 			<folder>views/</folder>
-			<filename>admin.awocoupon.php</filename>
+			<filename>awocoupon.php</filename>
 			<filename>awocoupon.config.php</filename>
 			<filename>controller.php</filename>
 			<filename>index.html</filename>
@@ -66,4 +66,4 @@
 		<plugin plugin="awocoupon" group="vmcoupon" />
 		<plugin plugin="awocoupon" group="vmpayment" />
 	</plugins>
-</install>
+</extension>

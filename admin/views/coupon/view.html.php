@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport( 'joomla.application.component.view');
 
-class AwoCouponViewCoupon extends JView {
+class AwoCouponViewCoupon extends JViewLegacy {
 
 	function display($tpl = null) {
 
