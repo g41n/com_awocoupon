@@ -153,7 +153,7 @@ class AwoCouponModelCoupons extends JModelLegacy
 		$filter_discount_type = JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'.coupons.filter_discount_type', 		'filter_discount_type', 		'', 'cmd' );
 		$filter_function_type = JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'.coupons.filter_function_type', 		'filter_function_type', 		'', 'cmd' );
 		$search 			= JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'coupons.search', 			'search', 		'', 'string' );
-		$search 			= $this->_db->getEscaped( trim(JString::strtolower( $search ) ) );
+		$search 			= $this->_db->escape( trim(JString::strtolower( $search ) ) );
 	
 		$where = array();
 		
@@ -179,7 +179,7 @@ class AwoCouponModelCoupons extends JModelLegacy
 		if ( $filter_coupon_value_type ) $where[] = 'c.coupon_value_type = \''.$filter_coupon_value_type.'\'';
 		if ( $filter_discount_type ) $where[] = 'c.discount_type = \''.$filter_discount_type.'\'';
 		if ( $filter_function_type ) $where[] = 'c.function_type = \''.$filter_function_type.'\'';
-		if ($search) $where[] = ' LOWER(c.coupon_code) LIKE '.$this->_db->Quote( '%'.$this->_db->getEscaped( $search, true ).'%', false );
+		if ($search) $where[] = ' LOWER(c.coupon_code) LIKE '.$this->_db->Quote( '%'.$this->_db->escape( $search, true ).'%', false );
 
 		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
 

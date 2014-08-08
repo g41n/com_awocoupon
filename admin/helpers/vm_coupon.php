@@ -94,7 +94,7 @@ class vm_coupon {
 						 ((startdate IS NULL OR startdate="") 	AND expiration>="'.$current_date.'") OR
 						 (startdate<="'.$current_date.'"		AND expiration>="'.$current_date.'")
 					   )
-				   AND coupon_code='.$db->Quote( $db->getEscaped($this->vmcoupon_code)).'';
+				   AND coupon_code='.$db->Quote( $db->escape($this->vmcoupon_code)).'';
 		$db->setQuery( $sql );
 		$coupon_row = $db->loadObject();
 		$this->coupon_row = $coupon_row;

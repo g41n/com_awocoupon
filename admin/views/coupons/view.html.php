@@ -32,7 +32,7 @@ class AwoCouponViewCoupons extends JViewLegacy {
 		$filter_function_type = JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'.coupons.filter_function_type', 		'filter_function_type', 		'', 'cmd' );
 		$filter_expiration = JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'.coupons.filter_expiration', 		'filter_expiration', 		'', 'cmd' );
 		$search 			= JFactory::getApplication()->getUserStateFromRequest( AWOCOUPON_OPTION.'.coupons.search', 			'search', 			'', 'string' );
-		$search 			= $db->getEscaped( trim(JString::strtolower( $search ) ) );
+		$search 			= $db->escape( trim(JString::strtolower( $search ) ) );
 
 		//add css and submenu to document
 		$document->addStyleSheet(com_awocoupon_ASSETS.'/css/style.css');

@@ -187,7 +187,7 @@ class AwoCouponController extends JControllerLegacy {
 		}
 
 		$type = JRequest::getVar( 'type' );
-		$q = $db->Quote( $db->getEscaped( trim(JString::strtolower( $q ) ), true ).'%', false );
+		$q = $db->Quote( $db->escape( trim(JString::strtolower( $q ) ), true ).'%', false );
 		
 		$result = array();
 		switch($type) {
